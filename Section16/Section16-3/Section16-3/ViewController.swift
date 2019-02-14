@@ -26,8 +26,6 @@ class ViewController: UIViewController {
         default:
             break
         }
-        
-        
     }
     
     override func viewDidLoad() {
