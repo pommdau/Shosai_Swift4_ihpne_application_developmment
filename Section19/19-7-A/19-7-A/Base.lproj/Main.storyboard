@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_9_7_A" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Zh-vl-LHR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SjY-JP-xps">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="横浜" id="uJn-EO-czH">
+                                        <connections>
+                                            <action selector="gotoSpot:" destination="BYZ-38-t0r" id="FHn-Gf-8Ic"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="YSp-yz-AP2">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="As9-hA-GSH">
+                                            <rect key="frame" x="62" y="7" width="260" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="地図" width="40"/>
+                                                <segment title="写真" width="40"/>
+                                                <segment title="地図・写真" width="100"/>
+                                                <segment title="3D" width="40"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="changedMapType:" destination="BYZ-38-t0r" eventType="valueChanged" id="6bQ-oi-QHQ"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Zh-vl-LHR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="IM7-TI-oON"/>
+                            <constraint firstItem="9Zh-vl-LHR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UOe-4h-Wlv"/>
+                            <constraint firstItem="SjY-JP-xps" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="VFd-Cz-Odb"/>
+                            <constraint firstItem="9Zh-vl-LHR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WbY-zH-6xc"/>
+                            <constraint firstItem="SjY-JP-xps" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ct0-Ao-Wrg"/>
+                            <constraint firstItem="9Zh-vl-LHR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gKZ-RW-a9N"/>
+                            <constraint firstItem="9Zh-vl-LHR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kau-0M-eBm"/>
+                            <constraint firstItem="SjY-JP-xps" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="p9P-BO-XMw"/>
+                            <constraint firstItem="9Zh-vl-LHR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qI5-oB-xmW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myMap" destination="9Zh-vl-LHR" id="wcH-mP-mcg"/>
+                        <outlet property="toolBar" destination="SjY-JP-xps" id="uxo-PA-M4t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
