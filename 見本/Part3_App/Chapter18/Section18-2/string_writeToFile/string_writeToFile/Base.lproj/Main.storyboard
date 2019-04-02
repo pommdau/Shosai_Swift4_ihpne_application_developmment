@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="string_writeToFile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="ここにテキストを入力してください。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bPn-vF-KNQ">
+                                <rect key="frame" x="44" y="41" width="287" height="112"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.70877950170000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="otM-r7-NEF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r16-m8-WGX">
+                                <rect key="frame" x="44" y="289" width="287" height="112"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="Emd-jE-aOS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPW-Z3-zL1">
+                                <rect key="frame" x="295" y="161" width="36" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="4LJ-h2-ZAg"/>
+                                    <constraint firstAttribute="height" constant="34" id="9Vq-dJ-GIn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="保存"/>
+                                <connections>
+                                    <action selector="saveToFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wUc-PL-4vC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrf-Xs-D1E">
+                                <rect key="frame" x="44" y="247" width="72" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="F19-K8-81P"/>
+                                    <constraint firstAttribute="width" constant="72" id="ZDx-2F-SXI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="読み込む"/>
+                                <connections>
+                                    <action selector="readFromFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ILa-Dd-ZOc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xrf-Xs-D1E" firstAttribute="top" secondItem="bPn-vF-KNQ" secondAttribute="bottom" constant="94" id="Bws-YJ-rE0"/>
+                            <constraint firstItem="xrf-Xs-D1E" firstAttribute="leading" secondItem="r16-m8-WGX" secondAttribute="leading" id="ENP-Zv-Dog"/>
+                            <constraint firstItem="bPn-vF-KNQ" firstAttribute="trailing" secondItem="KPW-Z3-zL1" secondAttribute="trailing" id="EOm-J6-Gl6"/>
+                            <constraint firstItem="KPW-Z3-zL1" firstAttribute="trailing" secondItem="r16-m8-WGX" secondAttribute="trailing" id="Fka-pF-SdV"/>
+                            <constraint firstItem="bPn-vF-KNQ" firstAttribute="leading" secondItem="xrf-Xs-D1E" secondAttribute="leading" id="ImB-KK-jft"/>
+                            <constraint firstItem="bPn-vF-KNQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="Let-rb-eRG"/>
+                            <constraint firstItem="KPW-Z3-zL1" firstAttribute="top" secondItem="bPn-vF-KNQ" secondAttribute="bottom" constant="8" id="PYi-RQ-IzG"/>
+                            <constraint firstItem="bPn-vF-KNQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="mnz-As-mU7"/>
+                            <constraint firstItem="bPn-vF-KNQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pdR-ur-ASe"/>
+                            <constraint firstItem="r16-m8-WGX" firstAttribute="top" secondItem="xrf-Xs-D1E" secondAttribute="bottom" constant="8" id="uUl-Vy-1NW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView1" destination="bPn-vF-KNQ" id="a2z-MT-EvW"/>
+                        <outlet property="textView2" destination="r16-m8-WGX" id="hWQ-9F-Phe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

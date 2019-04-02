@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="fileManager_fileExists" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaI-E7-dLm">
+                                <rect key="frame" x="44" y="317" width="287" height="112"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="bZx-DZ-kTh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQc-s6-1eP">
+                                <rect key="frame" x="295" y="189" width="36" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="O5n-cG-Ez9"/>
+                                    <constraint firstAttribute="height" constant="34" id="m2S-on-aaq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="保存"/>
+                                <connections>
+                                    <action selector="saveToFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="47B-Rr-rZC"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="ここにテキストを入力してください。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oog-4r-SBV">
+                                <rect key="frame" x="44" y="69" width="287" height="112"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.70877950170000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="bIB-ii-9ZS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpw-jX-D44">
+                                <rect key="frame" x="44" y="275" width="72" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="EPc-LY-nlc"/>
+                                    <constraint firstAttribute="width" constant="72" id="zQu-WD-CAi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="読み込む"/>
+                                <connections>
+                                    <action selector="readFromFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wU9-ci-NR1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oog-4r-SBV" firstAttribute="leading" secondItem="vpw-jX-D44" secondAttribute="leading" id="1JP-cE-JBk"/>
+                            <constraint firstItem="oog-4r-SBV" firstAttribute="trailing" secondItem="XQc-s6-1eP" secondAttribute="trailing" id="2Qa-OG-zdn"/>
+                            <constraint firstItem="vpw-jX-D44" firstAttribute="leading" secondItem="zaI-E7-dLm" secondAttribute="leading" id="D8d-qs-4CM"/>
+                            <constraint firstItem="oog-4r-SBV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FeI-RC-mEd"/>
+                            <constraint firstItem="XQc-s6-1eP" firstAttribute="top" secondItem="oog-4r-SBV" secondAttribute="bottom" constant="8" id="TQO-KC-y58"/>
+                            <constraint firstItem="oog-4r-SBV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="afI-LI-XB8"/>
+                            <constraint firstItem="vpw-jX-D44" firstAttribute="top" secondItem="oog-4r-SBV" secondAttribute="bottom" constant="94" id="nNb-MS-Vd6"/>
+                            <constraint firstItem="XQc-s6-1eP" firstAttribute="trailing" secondItem="zaI-E7-dLm" secondAttribute="trailing" id="oST-5R-iDr"/>
+                            <constraint firstItem="zaI-E7-dLm" firstAttribute="top" secondItem="vpw-jX-D44" secondAttribute="bottom" constant="8" id="pD2-G8-FYU"/>
+                            <constraint firstItem="oog-4r-SBV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="sln-Wk-b7d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView1" destination="oog-4r-SBV" id="O8i-oN-dFM"/>
+                        <outlet property="textView2" destination="zaI-E7-dLm" id="rdo-hM-F8p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

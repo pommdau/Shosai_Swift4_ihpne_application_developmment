@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="supportedOriantation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STt-N2-Oyn">
+                                <rect key="frame" x="197" y="582" width="123" height="30"/>
+                                <state key="normal" title="詳細ページを開く"/>
+                                <connections>
+                                    <segue destination="xvP-p0-eZG" kind="showDetail" id="54T-za-syb"/>
+                                </connections>
+                            </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="tree-a" translatesAutoresizingMaskIntoConstraints="NO" id="u9H-Aa-LEA">
+                                <rect key="frame" x="144" y="262" width="87" height="142"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="STt-N2-Oyn" secondAttribute="trailing" constant="55" id="HPT-nI-YwS"/>
+                            <constraint firstItem="u9H-Aa-LEA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X46-Qe-MWu"/>
+                            <constraint firstItem="u9H-Aa-LEA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="a15-V4-U66"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="STt-N2-Oyn" secondAttribute="bottom" constant="55" id="bD2-Cu-OhT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82" y="133"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="c5K-2I-GgD">
+            <objects>
+                <viewController id="xvP-p0-eZG" customClass="DetailViewController" customModule="supportedOriantation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i4P-Xc-COe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zd9-Y0-TIS">
+                                <rect key="frame" x="182" y="582" width="138" height="30"/>
+                                <state key="normal" title="詳細ページを閉じる"/>
+                                <connections>
+                                    <action selector="goBack:" destination="xvP-p0-eZG" eventType="touchUpInside" id="M6i-g4-4ms"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="詳細ページ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykh-9B-4gw">
+                                <rect key="frame" x="116.5" y="145" width="142" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="0.70877950170000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ypU-dh-I9Y" firstAttribute="bottom" secondItem="zd9-Y0-TIS" secondAttribute="bottom" constant="55" id="2qB-CT-NHX"/>
+                            <constraint firstItem="ypU-dh-I9Y" firstAttribute="trailing" secondItem="zd9-Y0-TIS" secondAttribute="trailing" constant="55" id="7LQ-Xw-gtj"/>
+                            <constraint firstItem="Ykh-9B-4gw" firstAttribute="top" secondItem="ypU-dh-I9Y" secondAttribute="top" constant="125" id="7rB-xO-cys"/>
+                            <constraint firstItem="Ykh-9B-4gw" firstAttribute="centerX" secondItem="i4P-Xc-COe" secondAttribute="centerX" id="ogI-5z-nYw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ypU-dh-I9Y"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qtW-zF-WK5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="133"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tree-a" width="87" height="142"/>
+    </resources>
+</document>

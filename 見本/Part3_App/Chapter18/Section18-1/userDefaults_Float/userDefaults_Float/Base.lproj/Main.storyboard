@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="userDefaults_Float" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vJj-ZU-pQ5">
+                                <rect key="frame" x="104" y="55" width="225" height="31"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vj5-aZ-Xnz">
+                                <rect key="frame" x="184" y="115" width="143" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLS-tg-Vf7">
+                                <rect key="frame" x="184" y="273" width="143" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Rxm-Jp-mCN">
+                                <rect key="frame" x="106" y="236" width="221" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mG1-tf-yDx">
+                                <rect key="frame" x="46" y="55" width="32" height="30"/>
+                                <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="saveValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XcZ-CF-Lba"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKv-xr-19v">
+                                <rect key="frame" x="47" y="222" width="31" height="30"/>
+                                <state key="normal" title="read"/>
+                                <connections>
+                                    <action selector="readValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qjz-Cj-Ouh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TLS-tg-Vf7" firstAttribute="top" secondItem="Rxm-Jp-mCN" secondAttribute="bottom" constant="35" id="3gr-e2-ZNo"/>
+                            <constraint firstItem="RKv-xr-19v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="7rR-a9-PHx"/>
+                            <constraint firstItem="TLS-tg-Vf7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="184" id="D9C-hh-zJt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vJj-ZU-pQ5" secondAttribute="trailing" constant="48" id="ETi-zi-wig"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rxm-Jp-mCN" secondAttribute="trailing" constant="32" id="GuK-Kf-Qcm"/>
+                            <constraint firstItem="vJj-ZU-pQ5" firstAttribute="leading" secondItem="mG1-tf-yDx" secondAttribute="trailing" constant="28" id="NeS-8Q-Kf2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vj5-aZ-Xnz" secondAttribute="trailing" constant="48" id="V9Z-FD-Z2S"/>
+                            <constraint firstItem="Rxm-Jp-mCN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="Yi9-av-xKH"/>
+                            <constraint firstItem="Vj5-aZ-Xnz" firstAttribute="top" secondItem="vJj-ZU-pQ5" secondAttribute="bottom" constant="30" id="ZgZ-4M-Lra"/>
+                            <constraint firstItem="Rxm-Jp-mCN" firstAttribute="top" secondItem="Vj5-aZ-Xnz" secondAttribute="bottom" constant="100" id="c72-fP-zPR"/>
+                            <constraint firstItem="mG1-tf-yDx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="e2A-J7-aV5"/>
+                            <constraint firstItem="mG1-tf-yDx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="gGF-MP-vKS"/>
+                            <constraint firstItem="RKv-xr-19v" firstAttribute="top" secondItem="mG1-tf-yDx" secondAttribute="bottom" constant="137" id="lGh-bz-yog"/>
+                            <constraint firstItem="Vj5-aZ-Xnz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="184" id="rea-EA-268"/>
+                            <constraint firstItem="TLS-tg-Vf7" firstAttribute="trailing" secondItem="Rxm-Jp-mCN" secondAttribute="trailing" id="uBa-cb-WmJ"/>
+                            <constraint firstItem="vJj-ZU-pQ5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="uqb-gm-tSO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myProgress" destination="Rxm-Jp-mCN" id="G1Y-G9-gjn"/>
+                        <outlet property="mySlider" destination="vJj-ZU-pQ5" id="FQ2-Tu-jdu"/>
+                        <outlet property="progressLabel" destination="TLS-tg-Vf7" id="847-k1-4uG"/>
+                        <outlet property="sliderLabel" destination="Vj5-aZ-Xnz" id="OKX-kW-0Dh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="nortificationCenter_keyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ffp-u8-eGo">
+                                <rect key="frame" x="20" y="44" width="280" height="504"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">清少納言／枕草子
+春はあけぼの。やうやう白くなり行く、山ぎは少しあかりて、紫だちたる雲の細くたなびきたる。 
+
+夏は夜。月のころはさらなり。やみもなほ、ほたるの多く飛びちがひたる。また、ただ一つ二つなど、ほのかにうち光りて行くもをかし。雨など降るもをかし。
+
+秋は夕暮。夕日のさして山の端(は)いと近うなりたるに、烏(からす)の寝どころへ行くとて、三つ四つ、二つ三つなど飛びいそぐさへあはれなり。まいて雁(かり)などのつらねたるが、いと小さく見ゆるはいとをかし。日入りはてて、風の音、虫の音など、はたいふべきにあらず。
+
+冬はつとめて。雪の降りたるはいふべきにもあらず。霜のいと白きも、またさらでも、いと寒きに、火などいそぎおこして、炭もてわたるもいとつきづきし。昼になりて、ぬるくゆるびもて行けば、火桶の火も白き灰がちになりてわろし。</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nbt-d3-aDJ">
+                                <rect key="frame" x="0.0" y="0.0" width="324" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="oqv-GL-cpJ">
+                                        <connections>
+                                            <action selector="cancel:" destination="BYZ-38-t0r" id="e7E-xG-06V"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pGt-yW-ED9"/>
+                                    <barButtonItem systemItem="save" id="VgN-9M-DXI">
+                                        <connections>
+                                            <action selector="saveToFile:" destination="BYZ-38-t0r" id="fxI-l8-wvY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ffp-u8-eGo" secondAttribute="bottom" constant="20" id="BRm-Dp-qne"/>
+                            <constraint firstItem="Nbt-d3-aDJ" firstAttribute="centerX" secondItem="Ffp-u8-eGo" secondAttribute="centerX" constant="2" id="DgZ-Z4-qi9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ffp-u8-eGo" secondAttribute="trailing" constant="20" id="OyU-Zr-8IJ"/>
+                            <constraint firstItem="Ffp-u8-eGo" firstAttribute="top" secondItem="Nbt-d3-aDJ" secondAttribute="bottom" id="U8B-3J-PVD"/>
+                            <constraint firstItem="Nbt-d3-aDJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="VNj-R0-8ra"/>
+                            <constraint firstItem="Nbt-d3-aDJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dWK-ix-505"/>
+                            <constraint firstItem="Ffp-u8-eGo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hJp-WQ-Qjt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myTextView" destination="Ffp-u8-eGo" id="o2S-GW-m3W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>

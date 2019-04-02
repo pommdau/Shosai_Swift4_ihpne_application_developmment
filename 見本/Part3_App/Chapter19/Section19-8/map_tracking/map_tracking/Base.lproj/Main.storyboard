@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="map_tracking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tvN-ac-Lhh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XfL-8X-YIf">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem image="trackingNone" id="SFD-VF-90r">
+                                        <connections>
+                                            <action selector="tapTrackingButton:" destination="BYZ-38-t0r" id="sMt-OC-reU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XfL-8X-YIf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5e5-Jq-yQP"/>
+                            <constraint firstItem="tvN-ac-Lhh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7nu-rm-goY"/>
+                            <constraint firstItem="tvN-ac-Lhh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AUh-dn-dNc"/>
+                            <constraint firstItem="XfL-8X-YIf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="DM9-x5-Zb0"/>
+                            <constraint firstItem="tvN-ac-Lhh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LYB-Hg-ZNK"/>
+                            <constraint firstItem="tvN-ac-Lhh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VDm-rw-iHc"/>
+                            <constraint firstItem="XfL-8X-YIf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bvA-3H-ccz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myMap" destination="tvN-ac-Lhh" id="fn7-7I-qtj"/>
+                        <outlet property="trackingButton" destination="SFD-VF-90r" id="hdT-WX-Y53"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="trackingNone" width="37" height="37"/>
+    </resources>
+</document>
