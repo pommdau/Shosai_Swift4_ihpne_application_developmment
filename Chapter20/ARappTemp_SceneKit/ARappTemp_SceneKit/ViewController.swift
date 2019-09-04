@@ -16,35 +16,45 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set the view's delegate
-        sceneView.delegate = self
-        
-        // Show statistics such as fps and timing information
+
+        // fpsなどを表示する
         sceneView.showsStatistics = true
-        
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
+        // 空のシーンを作る
+        let scene = SCNScene()
         sceneView.scene = scene
+        
+        // ジオメトリ（球体）
+        let earth = SCNSphere(radius: 0.2)
+        // Textureの貼り付け
+        earth.firstMaterial?.diffuse.contents = UIImage(named: "earth_1024")
+        // Node(AR空間に配置できるオブジェクト)
+        let earthNode = SCNNode(geometry: earth)
+        // Animation
+        let action = SCNAction.rotateBy(x: 0, y: .pi*2, z: 0, duration: 100)
+        earthNode.runAction(SCNAction.repeatForever(action))
+        
+        // 位置決め
+        earthNode.position = SCNVector3(0.2, 0.3, -0.2)
+        // シーンに追加
+        sceneView.scene.rootNode.addChildNode(earthNode)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // Create a session configuration
+        // セッションのコンフィグを作る
         let configuration = ARWorldTrackingConfiguration()
-
-        // Run the view's session
+        // セッションの開始
         sceneView.session.run(configuration)
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        // Pause the view's session
+        // セッションを停止
         sceneView.session.pause()
+
     }
 
     // MARK: - ARSCNViewDelegate
